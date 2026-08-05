@@ -11,10 +11,10 @@ export interface UploadConfig {
 }
 
 export const imageUploadConfig = ({
-                                      des,
-                                      maxSizeMb = 5,
-                                      allowedTypes = ['jpg', 'jpeg', 'png', 'webp'],
-                                  }: UploadConfig = {}): MulterOptions => {
+    des,
+    maxSizeMb = 5,
+    allowedTypes = ['jpg', 'jpeg', 'png', 'webp'],
+}: UploadConfig = {}): MulterOptions => {
     return {
         storage: diskStorage({
             destination: './uploads/' + des,
